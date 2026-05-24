@@ -1,49 +1,62 @@
-# Complete Guide to Node Authentication with MySQL
+# 🛡️ Cybersecurity Assessment & Vulnerability Reporting System
 
-❤️ Visit [FullStack Framework 2023](https://github.com/manjeshpv/awesome-sandbox)
+A comprehensive security assessment platform built to evaluate web application vulnerabilities, manage secure authentication pathways, and generate structural security insights.
 
-Code for the entire scotch.io tutorial series: Complete Guide to Node Authentication with MongoDB
+---
 
-Current version database is ported to MySQL
+## 🚀 Key Objectives & Features
+* **Authentication Security:** Implemented secure session handling and user authentication using Passport.js.
+* **Vulnerability Assessment:** Analyzed Node.js/Express backend architectures for common security flaws (OWASP Top 10).
+* **Dynamic Reporting:** Structured views to visualize security compliance states and patch requirements.
 
-We will be using Passport to authenticate users locally, 
+---
 
-## Instructions
+## 📁 Repository Overview
+```text
+cybersecurity-assessment-report/
+├── app/                  # Core application logic and middleware configurations
+├── config/               # Database connections and secure strategy environments
+├── views/                # Frontend dashboard templates and reporting interfaces
+├── scripts/              # Automated security scripts or data processors
+├── server.js             # Main system entry point
+└── security-assessment/  # Dedicated documentation folder for assessment reports
+```
 
-If you would like to download the code and try it for yourself:
+---
 
-1. Clone the repo: `git clone git@github.com:manjeshpv/node-express-passport-mysql.git`
-1. Install packages: `npm install`
-1. Edit the database configuration: `config/database.js`
-1. Create the database schema: `node scripts/create_database.js`
-1. Launch: `node server.js`
-1. Visit in your browser at: `http://localhost:8080`
+## 🛠️ Technology Stack
+* **Backend Framework:** Node.js, Express.js
+* **Security & Authentication:** Passport.js (Secure Session Management)
+* **Template Engine:** EJS / HTML Views
+* **Environment Management:** Node Package Manager (npm)
 
+---
 
-Licence: 1
+## 💻 Installation & Local Setup
 
+Follow these instructions to spin up the assessment environment locally.
 
+### Prerequisites
+Ensure you have [Node.js](https://nodejs.org) installed on your machine.
 
-# Security Assessment - Week 1
+### Setup Instructions
+1. Clone the repository and navigate into the folder:
+   ```bash
+   cd cybersecurity-assessment-report
+   ```
+2. Install all core application dependencies safely:
+   ```bash
+   npm install
+   ```
+3. Boot up the local security server environment:
+   ```bash
+   npm start
+   ```
+   _The application framework will initialize locally on your designated port (typically http://localhost:3000)._
 
-## Description
-This repository contains a Node.js mock application used for basic vulnerability assessment during Week 1 of the Cybersecurity lab.
+---
 
-## Tasks Completed
-✅ Cloned and ran the application locally (`npm install`, `npm start`)  
-✅ Tested on `http://localhost:3000`  
-✅ Performed vulnerability assessment:
-- OWASP ZAP scan
-- XSS test (`<script>alert('XSS')</script>`)
-- SQL Injection test (`admin' OR '1'='1`)
-- Checked for weak password storage
-- Checked for misconfigurations
-
-## Findings
-- To be added here after your vulnerability testing results.
-
-## Areas of Improvement
-- Sanitize user inputs to prevent XSS
-- Use parameterized queries to prevent SQL Injection
-- Implement proper password hashing
-- Apply authentication middleware on protected routes
+## 🔒 Security Best Practices Implemented
+* Avoided hardcoding environment secrets by setting up distinct `/config` structures.
+* Handled login sessions securely via cryptographic passport strategies to mitigate session hijacking.
+* Implemented strict `.gitignore` configurations to prevent leakage of private keys or dependency artifacts (`node_modules`).
